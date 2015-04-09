@@ -1,0 +1,21 @@
+To do list.
+1.Create Object, view, service, dao and main classes. Separate packages based on classes.
+
+2.Add dependencies in Pom.xml. For example, postgresql, jdbc, log4j etc.
+
+3.Fill in Object classes
+
+4.Set properties. Such as, log4j.properties, application.properties. 
+  After setting log4j property, check and change the log file location and the log file name.
+
+5.Define Beans and BeansLocation.xml.
+
+6.Check Database // before making tables, finish up designing object classes.
+
+7.DI control test. Connecting  All components and check everything is connected.
+
+8.
+
+
+
+
