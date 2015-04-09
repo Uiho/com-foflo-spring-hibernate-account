@@ -78,6 +78,7 @@ public class AccountDaoImpl  extends AccountHibernateDaoSupport implements Accou
 		List<Account> alist =getHibernateTemplate().find("from Account where account_id=?",number);
 		Account account = alist.get(0);
 		Double newBalance = account.getAccountBalance() - wd;
+		if(newBalance <0) return -1;
 		account.setAccountBalance(newBalance);
 		getHibernateTemplate().update(account);
 		return 0;

@@ -74,7 +74,9 @@ public class AccountServiceImpl implements AccountService{
 
 	public double withdraw(Integer number, Double wd)  {
 		if(doesAccountExists(number) != true){return 0;}
-		accountDao.withdraw(number, wd);
+		if(accountDao.withdraw(number, wd) < 0){
+			logger.error("Access Denied, Account Balance below ZERO.");
+		}
 		return 0;
 	}
 
@@ -89,6 +91,7 @@ public class AccountServiceImpl implements AccountService{
 		if(accountBool==false){logger.info("doesAccountexists false, account number : " +number );
 		}else{logger.info("doesAccountexists ture, ccount number : " +number );}
 		return accountBool;
+
 	}
 	
 	public void showAccountDetails(Account account){
