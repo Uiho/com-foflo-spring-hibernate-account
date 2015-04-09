@@ -3,7 +3,7 @@
   
   
 	  <groupId>org.uchoi</groupId>
-	  <artifactId>org.uchoi-spring-data-hibernate-bankingAccount</artifactId>
+	  <artifactId>org.uchoi-spring-data-hibernate-account-banking</artifactId>
 	  <version>0.0.1-SNAPSHOT</version><packaging>jar</packaging>
       <name>spring-hibernate</name>
       <description>Create simple account for learning spring and hibernate.</description>
@@ -41,6 +41,12 @@
 	<dependencies>
 	
 		<!-- Add BELOW-->
+		
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>jsr250-api</artifactId>
+			<version>1.0</version>
+		</dependency>
 		
 		<!-- tomcat-jdbc -->
 		<dependency>
