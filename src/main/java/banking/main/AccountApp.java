@@ -24,8 +24,6 @@ public class AccountApp {
 		
 		AccountView accountView = (AccountView) context.getBean("accountView");
 		
-		accountView.showMainMenu();
-
-		
+		accountView.showMainMenu();		
 	}
 }
