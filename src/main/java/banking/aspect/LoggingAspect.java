@@ -42,7 +42,7 @@ public class LoggingAspect {
 	
 	
 	
-	@AfterThrowing(pointcut="execution(* banking.dao.AccountDaoImpl.saveAccount(..)", throwing="error")
+	@AfterThrowing(pointcut="execution(* banking.dao.AccountDaoImpl.saveAccount(..))", throwing="error")
 	public void logAfterThrowing(JoinPoint jp, Throwable error){
 		
 		logger.info(jp.getSignature()+", Error: "+ error);

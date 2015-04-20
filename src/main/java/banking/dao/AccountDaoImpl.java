@@ -27,7 +27,7 @@ public class AccountDaoImpl  extends AccountHibernateDaoSupport implements Accou
 	public AccountDaoImpl() {
 		logger.info("Inside AccountDaoImpl class Constructor");
 	}
-	
+
 	public Account saveAccount(String name, Double initialBalance) {
 		Account account =InsertAccount(initialBalance,InsertCustomer(name));
 		logger.info("Finished creating a bank account for " + name);
