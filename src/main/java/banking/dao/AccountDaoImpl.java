@@ -65,21 +65,37 @@ public class AccountDaoImpl  extends AccountHibernateDaoSupport implements Accou
 	
 
 	public double deposit(Integer number, Double deposit) {
+		List<Account> alist =getHibernateTemplate().find("from Account where account_id=?",number);
+		Account account = alist.get(0);
+		Double newBalance = account.getAccountBalance() + deposit;
+		account.setAccountBalance(newBalance);
+		getHibernateTemplate().update(account);
+		
 		return 0;
 	}
 
 	public double withdraw(Integer number, Double wd) {
-		// TODO Auto-generated method stub
+		List<Account> alist =getHibernateTemplate().find("from Account where account_id=?",number);
+		Account account = alist.get(0);
+		Double newBalance = account.getAccountBalance() - wd;
+		if(newBalance <0) return -1;
+		account.setAccountBalance(newBalance);
+		getHibernateTemplate().update(account);
 		return 0;
 	}
 
 	public boolean deleteAccount(Integer number) {
-		// TODO Auto-generated method stub
+		List<Account> alist =getHibernateTemplate().find("from Account where account_id=?",number);
+		Account account = alist.get(0);
+		getHibernateTemplate().delete(account);
 		return false;
 	}
 
 	public boolean doesAccountExists(Integer number) {
-		// TODO Auto-generated method stub
+		List<Account> alist =getHibernateTemplate().find("from Account where account_id=?",number);
+		if(alist.isEmpty() == false){
+			return true;
+		}
 		return false;
 	}
 	

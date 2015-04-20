@@ -42,6 +42,8 @@
 	
 		<!-- Add BELOW-->
 		
+		
+		<!-- javax-annotations -->
 		<dependency>
 			<groupId>javax.annotation</groupId>
 			<artifactId>jsr250-api</artifactId>
@@ -136,6 +138,7 @@
 			<version>2.2</version>
 		</dependency>
 	
+		<!-- Spring AOP + AspectJ -->
 		<dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
