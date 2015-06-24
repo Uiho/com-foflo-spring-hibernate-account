@@ -2,8 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
   
   
-	  <groupId>com.foflo</groupId>
-	  <artifactId>com-foflo-spring-data-hibernate-account-banking</artifactId>
+	  <groupId>org.foflo</groupId>
+	  <artifactId>org-foflo-spring-data-hibernate-account-banking</artifactId>
 	  <version>0.0.1-SNAPSHOT</version><packaging>jar</packaging>
       <name>spring-hibernate</name>
       <description>Create simple account for learning spring and hibernate.</description>
